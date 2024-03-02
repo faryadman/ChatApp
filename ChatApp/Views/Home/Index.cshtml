@@ -1,0 +1,42 @@
+﻿@page
+
+<link href="~/css/chat.css" rel="stylesheet" />
+@section Scripts
+{
+    <script src="~/js/Chat.js"></script>
+}
+<div id="chatDialog" title="Chat With Support" class="disconnected">
+    <div id="chatWelcomePanel">
+        <h3>Have a question ?</h3>
+        <form id="chatConnectForm">
+            <input class="form-control" type="text" placeholder="Enter Your Name" />
+            <input type="submit" class="btn btn-info" value="Connect" />
+        </form>
+    </div>
+    <div id="chatConnectingInfo">
+        <strong>Connecting ...</strong>
+    </div>
+    <div id="chatMainPanel">
+        <ul id="chatHistory"></ul>
+        <div id="bottomPanel">
+            <div class="row">
+                <div id="typingIndicator" style="display: none;">is typing...</div>
+                <form id="chatForm">
+                    <div class="col-md-8">
+                        <input id="messageTextBox" class="form-control" type="text" placeholder="Type a Message" />
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="col-md-1">
+                            <input type="file" id="imageInput" style="display: none;" />
+                            <label for="imageInput" class="btn btn-primary">Upload</label>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="submit" class="btn btn-success" value="Send"/>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
